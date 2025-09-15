@@ -1,43 +1,137 @@
-Nyra – Private Perpetuals Protocol
+Nyra: Private Perpetual Market on Horizen EVM
 
-Nyra is a decentralized perpetuals protocol built to provide traders with private, low-cost leveraged trading while offering liquidity providers sustainable yield opportunities. The protocol combines efficient on-chain execution with privacy-focused infrastructure and robust risk management mechanisms.
+Nyra is a private perpetual market built on the Horizen EVM, designed to provide leveraged trading with robust privacy guarantees and minimal gas fees. By combining smart contracts with Trusted Execution Environments (TEEs), Nyra enables institutions and individuals to trade perpetual futures, options, and indices without exposing sensitive strategies, balances, or transaction details.
 
-> Key Features
+🚀 Vision
 
-Private Leveraged Trading
-Open long or short positions on major assets with leverage, minimal gas costs, and strong privacy guarantees.
+Nyra aims to create a privacy-first perpetual market where:
 
-Liquidity Provider (LP) Vaults
-LPs supply collateral to the system and earn yield through interest payments, trading fees, and funding rate flows.
+Traders can open leveraged positions on multiple assets with strong privacy.
 
-Dynamic Interest Rates
-Interest on borrowed funds adjusts based on market demand, rewarding LPs when utilization is high and lowering costs for traders when demand is low.
+Liquidity Providers (LPs) supply collateral and earn interest or fees.
 
-Funding Rate Mechanism
-A peer-to-peer funding system aligns perpetual contract prices with the underlying spot market by balancing long and short demand.
+Automated Liquidators maintain market health by closing undercollateralized positions securely and privately.
 
-Automated Liquidations
-Under-collateralized positions are closed by permissionless liquidators, protecting system solvency. Liquidators are rewarded with fees, and a portion is directed to an insurance fund.
+This design ensures a secure, private, and efficient perpetual trading system.
 
-Protocol Security
-Circuit breakers, oracle safeguards, and insurance reserves ensure market stability during volatility or anomalies.
+>> Problem Statement
 
-📈 Example Use Cases
+Most decentralized perpetual markets today:
 
-Traders: Gain leveraged exposure to assets while preserving privacy.
+Operate on public blockchains, revealing transaction data and strategies.
 
-Liquidity Providers: Earn yield by supplying stable collateral to the system.
+Lack institutional-grade privacy and scalability.
 
-Liquidators: Secure the protocol and earn incentives by closing risky positions.
+Struggle with advanced instruments like options due to computational overhead.
 
-🔒 Vision
+Nyra solves this by leveraging Horizen EVM with TEEs to keep trading encrypted, private, and scalable.
 
-Nyra’s vision is to redefine perpetual trading by combining the efficiency of decentralized exchanges, the robustness of risk-managed leverage, and the privacy guarantees traders need in modern markets.
+🛠 Product Features
+1. Private Perpetual Futures
 
-🚀 Roadmap (High-Level)
+Open leveraged long/short positions privately.
 
-Testnet Launch: Core contracts, isolated margin, basic funding + liquidation mechanisms.
+Interest rate model for borrowed capital (variable or fixed).
 
-Mainnet (Phase 1): BTC/ETH perps, LP vaults, automated liquidations.
+Funding rate ensures market balance between longs and shorts.
 
-Mainnet (Phase 2): Expanded assets, cross-margin, advanced order types, enhanced privacy layer.
+Automated liquidation keeps markets solvent.
+
+2. Private Leveraged Indices
+
+Create indices of multiple assets.
+
+Trade indices with private leverage.
+
+Private rebalancing without revealing composition.
+
+3. Private Options Market
+
+Perpetual call and put options with privacy guarantees.
+
+Hedging strategies remain fully confidential.
+
+Private liquidations if collateral falls short.
+
+📐 Technical Architecture
+
+Nyra combines Horizen smart contracts and Trusted Execution Environments (TEEs) for private trading.
+
+Workflow (as per diagram):
+<img width="1280" height="610" alt="image" src="https://github.com/user-attachments/assets/b6a28bc2-50c8-4869-adbc-a884e56d34da" />
+
+Asset Locking
+
+Users lock assets in a Horizen smart contract.
+
+TEE Event Listening
+
+The TEE listens to smart contract events and maintains a balance Merkle tree.
+
+TEE Public Key Fetching
+
+Users fetch the TEE public key for encrypting trade details.
+
+Encrypted Trade Submission
+
+Users send encrypted trade data to the Horizen smart contract.
+
+Private Execution
+
+Trade details are decrypted and executed inside the TEE, ensuring confidentiality.
+
+This architecture guarantees that no sensitive data is visible on-chain while preserving trust via TEE attestation.
+
+📊 Market Opportunity
+
+Decentralized Derivatives Market Size (2025 projection): ~$30B+ TVL
+
+Perpetual Futures Volume (2024): $2–3T annually in DeFi
+
+Options Market Growth: Early but expanding rapidly, especially for institutional DeFi.
+
+Nyra differentiates itself by combining privacy + perpetuals + scalability, addressing a gap in both retail and institutional DeFi.
+
+🔑 Go-to-Market Strategy
+
+Target crypto-native traders and institutions valuing privacy.
+
+Leverage the Horizen ecosystem for initial liquidity and community support.
+
+Create educational content on private derivatives.
+
+Form strategic partnerships with liquidity providers and DeFi protocols.
+
+📌 Roadmap
+
+Phase 1: Smart contract deployment on Horizen testnet.
+
+Phase 2: Integrate TEE-based encrypted trading.
+
+Phase 3: Launch perpetual futures.
+
+Phase 4: Add leveraged indices and perpetual options.
+
+Phase 5: Mainnet launch with institutional onboarding.
+
+🛡 Security & Privacy
+
+TEE Attestation: Verifiable computation inside hardware enclaves.
+
+Encrypted Trades: No strategy, position, or collateral data exposed on-chain.
+
+Private Liquidations: Protects traders while ensuring system solvency.
+
+📬 Contributing
+
+We welcome contributions! Please open issues or submit PRs for:
+
+Smart contract optimizations
+
+Privacy enhancements
+
+Documentation
+
+📄 License
+
+This project is licensed under the MIT License.
