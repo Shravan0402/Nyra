@@ -1,6 +1,6 @@
-Nyra: Private Perpetual Market on Horizen EVM
+Nyra: Private Perpetual Market on Horizen 
 
-Nyra is a private perpetual market built on the Horizen EVM, designed to provide leveraged trading with robust privacy guarantees and minimal gas fees. By combining smart contracts with Trusted Execution Environments (TEEs), Nyra enables institutions and individuals to trade perpetual futures, options, and indices without exposing sensitive strategies, balances, or transaction details.
+Nyra is a private perpetual market built on the Horizen, designed to provide leveraged trading with robust privacy guarantees and minimal gas fees. By combining smart contracts with Trusted Execution Environments (TEEs), Nyra enables institutions and individuals to trade perpetual futures, options, and indices without exposing sensitive strategies, balances, or transaction details.
 
 🚀 Vision
 
@@ -22,7 +22,7 @@ Most decentralized perpetual markets today:
 2) Lacks institutional-grade privacy and scalability.
 3) Struggle with advanced instruments like options due to computational overhead.
 
-Nyra solves this by leveraging Horizen EVM with TEEs to keep trading encrypted, private, and scalable.
+Nyra solves this by leveraging Horizen with TEEs to keep trading encrypted, private, and scalable.
 
 🛠 Product Features
 1. Private Perpetual Futures
@@ -100,7 +100,3 @@ Phase 5: Mainnet launch with institutional onboarding.
 TEE Attestation: Verifiable computation inside hardware enclaves.
 Encrypted Trades: No strategy, position, or collateral data exposed on-chain.
 Private Liquidations: Protects traders while ensuring system solvency.
-
-📄 License
-
-This project is licensed under the MIT License.
